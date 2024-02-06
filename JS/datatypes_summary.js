@@ -42,3 +42,26 @@ console.log(typeof bigInteger)
 console.log(typeof temp)
 
 // for reference https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// ******************************************************************************************************************
+
+// Stack memory(used in primitive memory), heap memory(Non-primitive)
+
+let ytname = "akashyerra"
+
+let anotherName = ytname
+anotherName = "comrade2003"
+console.log(ytname)
+console.log(anotherName)
+
+let user1 = { // user is an object
+    email : "user@google.com",
+    upi : "user@axis"
+}
+
+let user2 = user1;
+user2.email = "user2@yahoo.com";
+
+console.log(user1.email)
+console.log(user2.email)
