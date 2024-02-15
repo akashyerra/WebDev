@@ -63,5 +63,36 @@ console.log(Object.values(instaUser)); // it returns an array containing of valu
 console.log(Object.entries(instaUser)); // it returns an array containing of key value pair as an array, and key value pairs are returned in the form of nested array
 
 console.log(instaUser.hasOwnProperty("isLoggedOut")); // returns a boolean, whether the object contains the specified parameter or not
+console.log();
 
 // to know the important properties of the object just use the inspect and console tab in the browser.
+
+// object de-structuring
+const course = {
+    courseName: "js tutorial",
+    price: "999",
+    courseInstructor: "akash"
+};
+
+// course.courseInstructor
+
+const {courseInstructor: instructor} = course;
+// console.log(courseInstructor);
+console.log(instructor);
+
+// by accessing an api, we recieve some data, in earlier days it used be in the format of xml, but in the present day it is of the form json
+// json stands for JavaScript Object Notation
+// json looks in the below way, the keys and values are strings
+// {
+//     "name": "akash",
+//     "courseName": "js tutorial",
+//     "price": "free"
+// }
+
+// apis are also recieved in the format of array of objects
+// [
+//     {},
+//     {},
+//     {}
+// ]
+
