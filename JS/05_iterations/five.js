@@ -33,3 +33,6 @@ const myCoding = [
 myCoding.forEach( (item) => {
     console.log(item.languageFileName);
 })
+console.log();
+
+// refer mdn docs for more info about the high order loops for arrays and objects
