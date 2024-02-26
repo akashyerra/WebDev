@@ -22,3 +22,4 @@ nums.forEach( (num) => {
 } )
 console.log(newNums);
 
+// follow mdn docs for detailed information 
