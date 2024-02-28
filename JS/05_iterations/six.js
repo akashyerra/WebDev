@@ -42,3 +42,7 @@ const books = [
     return bk.publish >= 1995 && bk.genre === "History"
 })
   console.log(userBooks);
+
+  let trialNums = []
+  nums.forEach( (num) => {trialNums.push(num+20)} );
+  console.log(trialNums);
