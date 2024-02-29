@@ -37,7 +37,7 @@ const myfunc = function() {
     console.log("Hello world")
 }
 
-console.log(typeof mufunc)
+console.log(typeof myfunc)
 console.log(typeof bigInteger)
 console.log(typeof temp)
 
