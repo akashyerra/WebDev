@@ -36,5 +36,5 @@ console.log(newDate3.getMonth()); // .getMonth(), .getDate(), .getDay() gives th
 // .toLocaleString has this special property to be used for more details follow the mdn javascript dates page
 newDate3.toLocaleString('default', {
     weekday: "long",
-    timeZone: 'GMT+0530'
+    timeZone: 'UTC'
 });
