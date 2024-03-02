@@ -1,0 +1,17 @@
+{
+  "name": "webdev",
+  "version": "1.0.0",
+  "description": "This is a repository to learn and practice my web development skills and languages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3",
+    "react": "^18.2.0",
+    "readline-sync": "^1.4.10"
+  }
+}
