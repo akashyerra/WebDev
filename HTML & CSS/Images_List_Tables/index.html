@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <img height="575" src="image.png" alt="car" />
+    <!-- alt is the alternative text which is displayed when there is failure of the loading the image
+    we can adjust the height and width of the image, if we give anyone of these two the other is self adjusted, these values are in pixels there is no need to change -->
+
+    <table>
+      <caption>
+        Employee Data
+      </caption>
+      <thead>
+        <!-- table Header -->
+        <tr>
+          <!-- Table row -->
+          <th>Name</th>
+          <!-- Table column heading -->
+          <th>Designation</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Akash</td>
+          <!-- Table data -->
+          <td rowspan="2">CEO</td>
+          <!-- to merge two columns -->
+          <td>9999999</td>
+        </tr>
+        <tr>
+          <td>Varshith</td>
+          <td colspan="2">Executive head</td>
+          <!-- to merge two rows -->
+          <td>999999</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Rocky</td>
+          <td>Data analyst</td>
+          <td>Footer</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Lists in html
+    There are 3 types of lists in html:
+    1. Unordered list
+    2. Ordered list
+    3. Definition list-->
+
+    <ul type="circle">
+      <li>Pen</li>
+      <li>Pencil</li>
+    </ul>
+
+    <!-- Ordered List 
+        Setting the 'type' Attribute
+    The type attribute specifies the style of numbering. You have several options:
+
+    Uppercase Roman Numerals: Use type="I"
+    Lowercase Roman Numerals: Use type="i"
+    Arabic Numerals: Use type="1" (This is the default if the type attribute is not specified)
+    Lowercase Alphabetical Letters: Use type="a"
+    Uppercase Alphabetical Letters: Use type="A" -->
+
+    <ol type="I">
+      <li>Games</li>
+      <li>Library</li>
+      <li>Classroom</li>
+    </ol>
+
+    <!-- For more details read on https://www.codewithharry.com/tutorial/html-ordered-list/  -->
+
+    <h1>Definition List</h1>
+    <dl>
+      <dt>HTML</dt>
+      <dd>
+        HyperText Markup Language: The standard language for creating web pages.
+      </dd>
+
+      <dt>CSS</dt>
+      <dd>
+        Cascading Style Sheets: A stylesheet language used for describing the
+        look and formatting of a document written in HTML.
+      </dd>
+
+      <dt>JavaScript</dt>
+      <dd>
+        A programming language commonly used in web development to add
+        interactive features.
+      </dd>
+    </dl>
+  </body>
+</html>
