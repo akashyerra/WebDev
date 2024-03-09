@@ -1,0 +1,53 @@
+<!-- 
+    CSS Specificity
+    CSS Specificity helps determine what style will be applied to the HTML element(s) when there are overlapping or multiple CSS rules.
+    It is a value or weight assigned to a CSS selector. The higher the specificity, the more precedence the selector has.
+
+    The Cascade Algorithm
+    CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It's the reason that the text of the button styled with the above CSS will be purple.
+
+    Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages.
+
+    1. Position and order of appearance: the order in which your CSS rules appear
+    2. Specificity: an algorithm that determines which CSS selector has the strongest match
+    -=> order of specificity is: Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector 
+    3. Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS
+    4. Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type
+    
+    refer for better understanding: https://www.codewithharry.com/tutorial/css-specificity/ 
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specificity and Cascade</title>
+    <style>
+      h1 {
+        color: aqua;
+      }
+
+      .yellow {
+        color: yellow;
+      }
+
+      .cred {
+        color: red;
+      }
+
+      .cgreen {
+        color: green;
+      }
+      
+      /* [data-x="a"]{
+        background-color: red;
+      } */
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 class="yellow cred cgreen" data-x="a">CSS Specificity</h1>
+    </div>
+  </body>
+</html>
