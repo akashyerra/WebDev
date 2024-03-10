@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display Property</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        border: 2px solid blue;
+        display: inline-block;
+        /* display: inline -> used to make a block element to an inline element but using this we cannot set the top margin and top padding and also we cant change the width of the element */
+        /* disply: inline-block -> this makes the block element to an inline element and also solves the cons of using the property inline */
+        padding: 45px;
+        margin: 20px;
+        width: 255px;
+      }
+
+      .box1 {
+        /* display: none; */ /* display: none -> it is used to completely remove the element and also the space occupied by it */
+        visibility: hidden; /* visibility: none -> it is used to hide the block but keeps the space occupied by it intact */
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/display -->
+
+    <div class="box box1">This is a box</div>
+    <div class="box">I am a clean box</div>
+    <span> I am a good Boy </span>
+  </body>
+</html>
