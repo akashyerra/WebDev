@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Design</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: gray;
+        padding: 80px;
+        display: flex;
+      }
+
+      .card {
+        box-sizing: border-box;
+        background-color: white;
+        border-radius: 10px;
+        width: 250px;
+        padding: 0 0 16px 0;
+        margin: 5px;
+      }
+
+      .img {
+        box-sizing: border-box;
+        padding: 10px;
+      }
+      .img img {
+        border-radius: 10px;
+      }
+      .content {
+        padding: 8px 12px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .content p {
+        font-size: 15px;
+      }
+      .data {
+        padding: 0 20px;
+      }
+      .data span {
+        border: 2px solid lightgray;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        color: gray;
+        padding: 5px;
+        font-size: 12px;
+        border-radius: 14px;
+      }
+      .readMore{
+        text-align: center;
+      }
+      .readMore button{
+        padding: 4px 15px;
+        border-radius: 10px;
+        color: blue;
+        background-color: rgba(170, 221, 238, 0.648);
+        margin: 7px 0;
+        border: none;
+        cursor: pointer;
+      }
+
+      .readMore button:hover{
+        background-color: rgba(100, 66, 237, 0.648);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="img">
+        <img
+          height=""
+          width="230"
+          src="https://images.unsplash.com/photo-1536323760109-ca8c07450053?q=80&w=1665&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+      </div>
+      <div class="data">
+        <span>Nature</span>
+        <span>Lake</span>
+      </div>
+      <div class="content">
+        <h2>River Ride</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nobis,
+          deserunt expedita incidunt aut mollitia? Eveniet praesentium nihil
+          libero distinctio saepe
+        </p>
+      </div>
+      <div class="readMore">
+        <button>Read More</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="img">
+        <img
+          height=""
+          width="230"
+          src="https://images.unsplash.com/photo-1536323760109-ca8c07450053?q=80&w=1665&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+      </div>
+      <div class="data">
+        <span>Nature</span>
+        <span>Lake</span>
+      </div>
+      <div class="content">
+        <h2>River Ride</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nobis,
+          deserunt expedita incidunt aut mollitia? Eveniet praesentium nihil
+          libero distinctio saepe
+        </p>
+      </div>
+      <div class="readMore">
+        <button>Read More</button>
+      </div>
+    </div>
+  </body>
+</html>
