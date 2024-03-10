@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-size: 12px;
+      }
+
+      .box {
+        border: 2px solid black;
+        box-sizing: border-box;
+        /* width: 2048px; */
+        width: 70vw; /*viewport width -> takes the width of the device in which the website is displayed*/
+        margin: auto; /* Centers the element if and only if it is a block level element */
+        background-color: aquamarine;
+      }
+
+      .container {
+        border: 2px solid black;
+        box-sizing: border-box;
+        /* width: 2048px; */
+        width: 70vw; /*viewport width -> takes the width of the device in which the website is displayed*/
+        min-height: 80vh;
+        margin: 23px auto; /* Centers the element if and only if it is a block level element */
+        font-size: 18px;
+        background-color: aquamarine;
+      }
+
+      .container div {
+        /* font-size: 2em; the em is used to change the size in child which is inherited from the parent container. 1em = size in parent container */
+        font-size: 2.5rem; /* 1rem = root sizing value */
+        width: 50%;
+        border: 2px solid blue;
+      }
+
+      .container > div > div {
+        border: 2px solid black;
+        width: 50%;
+      }
+
+      .myCont {
+        box-sizing: border-box;
+        margin: 23px auto;
+        border: 2px solid black;
+        color: black;
+        font-size: 22px;
+        /* width: 100vmin; */
+        width: 80vw;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units -->
+    <div class="box">This is a box</div>
+
+    <div class="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod
+        recusandae explicabo. Minus, quisquam. Iste excepturi sequi distinctio
+        tempora rerum hic animi atque accusamus a magni, maiores ut, cupiditate
+        ullam nemo. Eum a facilis commodi maxime deserunt repudiandae delectus
+        laborum dolores consequatur iusto, dolore eius tenetur cumque ex eveniet
+        debitis. Magnam aspernatur temporibus sequi alias ex!
+      </p>
+      <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+        exercitationem obcaecati. Quaerat incidunt molestiae dolorum assumenda
+        rerum! Doloribus ducimus perspiciatis minus magni eligendi sunt nemo ad
+        incidunt, labore architecto expedita vero praesentium pariatur natus.
+        Ipsum eligendi velit earum similique at eum ex laborum assumenda, vel
+        aut nisi ratione quae officia libero quas facere enim, in soluta iusto
+        accusamus beatae! Assumenda at recusandae cumque ipsa dolor dolores
+        quibusdam molestias voluptates magnam, quaerat qui tempore, labore
+        dolore delectus et! Aliquam quidem esse quaerat vero? Maxime impedit,
+        cum quaerat laborum atque sunt, officiis incidunt assumenda aliquid
+        enim, sit doloremque consectetur perspiciatis autem.
+
+        <div>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga tempora
+          animi aliquid ut, quisquam et distinctio culpa eos consequuntur nulla
+          pariatur! Commodi, doloribus.
+        </div>
+      </div>
+    </div>
+
+    <div class="myCont">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+      reprehenderit eligendi ipsam ipsa omnis quo animi dolor, sit perferendis
+      laborum, asperiores rerum dicta!
+    </div>
+  </body>
+</html>
