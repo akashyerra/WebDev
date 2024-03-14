@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            width: 80vw;
+            height: 50vh;
+            border: 2px solid black;
+            display: grid;
+            /* grid-template-columns: [first] 120px [second] 100px [third];
+            grid-template-rows: 100px 100px 100px; */
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* grid-template-columns: repeat(4, 1fr); */
+            /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+            grid-template-columns: repeat(4, 80px);
+            gap: 34px;
+            row-gap: 10px;
+            column-gap: 30px;
+            justify-items: center;
+            align-items: center;
+
+            /* justify content and align content is only applicable when the grid size is very large and the items are very small in comparision */
+            justify-content: center;
+            align-content: center;
+            /* place-content: center; --> combines both justify content and align content */
+        }
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+        .item-3 {
+            /* grid-row: 1/2;
+            grid-column: first/third; */
+            align-self: start;
+            justify-self: end;
+        }
+        .item-1 {
+            /* grid-row: 1/2; */
+            /* or can do the same using given below two features */
+            /* grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column: 1/2; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
