@@ -96,10 +96,14 @@ a {
 	display: grid;
 	justify-items: center;
 	align-items: center;
-	grid-template-columns: repeat(3, 365px);
+	grid-template-columns: repeat(3, 1fr);
 	/* column-gap: 15px; */
-	row-gap: 20px;
+	gap: 20px;
 	
+}
+.langName{
+	text-align: center;
+	font-weight: 900
 }
 .downloads .l-bit {
 	border: none;
@@ -128,6 +132,7 @@ a {
 }
 .downloads .language h3 {
 	padding-bottom: 20px;
+	font-weight: 700;
 }
 .downloads .language h3 small{
 	color: grey;
@@ -136,4 +141,12 @@ a {
 
 .downloads .language .lanbuttons {
 	padding-top: 40px;
+}
+
+@media screen and (max-width: 945px) {
+	.downloads {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 13px;
+	}
 }
