@@ -21,11 +21,41 @@
 			Use wikipedia to test the DOM and advanced DOM concepts
         -->
 		<div>
-			<h1 class="heading">DOM learning on chai aur code</h1>
+			<h1 id="title" class="heading">
+				DOM learning on chai aur code
+				<span style="display: none">This is great</span>
+			</h1>
 			<p>
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi,
 				debitis.
 			</p>
+			<input type="password" name="" id="" />
+
+			<ul>
+				<li>one</li>
+				<li>two</li>
+				<li>three</li>
+			</ul>
 		</div>
+		<!-- 
+			some of the DOM accessing functions
+			document.getElementById("title") -> gives the id name 
+			document.getElementById("title").className -> gives the class of the element, .class wont work as the DOM understands the class attribute as a className
+
+			document.getElementById("title").getAttribute("class") -> gives class name
+			document.getElementById("title").setAttribute("class", "test") -> changes the class name from heading to test -> this function always over writes the value
+
+			const title = document.getElementById("title")
+			title.style.backgroundColor = "red" -> changes the color 
+
+			title.innerText = gives the content on that is being displayed on the screen (doesn't show the text which is having display property as none or hidden)
+			title.textContent = gives the text content irrespective of the display property 
+			title.innerHTML = gives all the HTML content also in the printing
+
+			document.getElementByClassName('heading') -> access all the elements with same class name
+			document.querySelector('h1') -> gives the 1st element with the tag h1
+			document.querySelector('input[type="password"]') -> gives the first input element with the attribute type=password
+
+		 -->
 	</body>
 </html>
