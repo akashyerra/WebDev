@@ -29,12 +29,21 @@
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi,
 				debitis.
 			</p>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi,
+				debitis.
+			</p>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi,
+				debitis.
+			</p>
 			<input type="password" name="" id="" />
 
 			<ul>
-				<li>one</li>
-				<li>two</li>
-				<li>three</li>
+				<li class="listItem">one</li>
+				<li class="listItem">two</li>
+				<li class="listItem">three</li>
+				<li class="listItem">Four</li>
 			</ul>
 		</div>
 		<!-- 
@@ -56,6 +65,10 @@
 			document.querySelector('h1') -> gives the 1st element with the tag h1
 			document.querySelector('input[type="password"]') -> gives the first input element with the attribute type=password
 
+			const tempList = document.querySelectorAll('li') -> selects all the elements with the tag 'li' and stores them into a "nodelist", but not in an "array"
+			tempList[0].style.color = "red" -> turns the first element with li tag to red color
+
+			document.getElementsByClassName('listItem') -> returns a HTMLCollection -> looping functions cannot be applied on the HTMLCollections
 		 -->
 	</body>
 </html>
