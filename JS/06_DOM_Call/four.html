@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chai Aur Code | DOM </title>
 </head>
-<body style="background-color: black; color: white;">
+
+<body style="background-color: rgb(29, 27, 27); color: white;">
     <ul class="language">
         <li>Javascript</li>
     </ul>
@@ -16,5 +18,35 @@
         li.innerHTML = `${langName}`;
         document.querySelector('.language').appendChild(li);
     }
+    addLanguage("Java");
+    addLanguage("Python");
+
+    function addOptimalLanguage(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector(".language").appendChild(li);
+    }
+    addOptimalLanguage("GoLang")
+    addOptimalLanguage("TypeScript")
+
+    // Editing the values
+        // 1st approach
+    const secondLang = document.querySelector("li:nth-child(2)");
+    secondLang.innerHTML = "Mojo"
+
+        // 2nd approach
+    const newLi = document.createElement("li");
+    newLi.textContent = "HTML"
+    secondLang.replaceWith(newLi)
+
+        // 3rd approach
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+
+    // Removing the values
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
 </script>
+
 </html>
