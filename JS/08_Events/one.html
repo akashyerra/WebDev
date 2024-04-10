@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: white;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // JS is a sequential language
+    // The events in JS also run sequentially, but there are some exceptions
+    // But sometimes we can move away from the sequence and run the program is other direction and return back; in case of async function
+    // The web browsers events are also sometimes exceptions, the events are activated on the some action by the mouse, keyboard etc
+    // Dont inject the onclick function in the element in html as it causes many problems during the scalability of your project, it is not a feasible approach in JS, may vary in case of ReactJS
+
+    // document.getElementById("owl").onclick = function () {
+    //     alert("owl clicked")
+    // }
+    // This approach also has a problem, whenever we are placing the onclick on the id, the onclick function may have some problems, not total info is given
+    // Use of eventListeners should be done, these give better propogation, and more information & features
+
+    // The best approach
+    // eventListener is a very powerful functions, it can listen various events by mouse and keyboard
+    // Some applications in interviews are given such that without placing the true/false the function is not completed
+    // By default it is always false
+    document.getElementById("owl").addEventListener('click', function(e){
+        console.log(e); // e is an pointerEvent type -> contains various browser events and function events
+
+    }, false)
+
+    // Interviews related questions
+    // Types, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    //  clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    // In earlier times, the below functions were used
+    // attachEvent() -> used during the internet explorer time
+    // jQuery -> on 
+
+
+
+    // Event propogation -> there are 2 concepts in eventPropogation
+    // 1. EventBubbling (when false is placed in the eventListener)(it is false by default) : the script tracks the from down to up of the DOM tree, i.e. from inside to outside
+    // document.getElementById("images").addEventListener('click', function(e){
+    //     console.log("clicked inside the ul"); // e is an pointerEvent type -> contains various browser events and function events
+    // }, false)
+
+    // document.getElementById("owl").addEventListener('click', function(e){
+    //     console.log("owl clicked")
+    // }, false)
+    // when owl pic is clicked the we are also clicking the owl image and ul list also 
+    // The main task is which function is activated first
+
+    // 2. EventCapturing mode (when true is placed inside the eventListner): the script tracks the from up to down of the DOM tree, i.e. from outside to inside
+    // document.getElementById("images").addEventListener('click', function(e){
+    //     console.log("clicked inside the ul"); // e is an pointerEvent type -> contains various browser events and function events
+    // }, true)
+
+    // document.getElementById("owl").addEventListener('click', function(e){
+    //     console.log("owl clicked")
+    // }, true)
+
+    // if we want to stop eventBubbling of inside element and the outer element remain seperate, then we can use stopPropogation
+    // document.getElementById("images").addEventListener('click', function(e){
+    //     console.log("clicked inside the ul"); // e is an pointerEvent type -> contains various browser events and function events
+    // }, true)
+
+    // document.getElementById("owl").addEventListener('click', function(e){
+    //     console.log("owl clicked")
+    //     e.stopPropagation()
+    // }, true)
+
+    // document.getElementById("google").addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("Google clicked");
+    // }, false)
+
+
+
+    // on click of any image the image should disappear
+    document.querySelector("#images").addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName == 'IMG'){
+            console.log(e.target.id)
+            let removePic = e.target.parentNode;
+            removePic.remove();
+        }
+        // removePic.parentNode.removeChild(removePic)
+
+    }, false)
+</script>
+</html>
