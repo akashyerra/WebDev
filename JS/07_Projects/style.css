@@ -31,7 +31,7 @@ main .projects {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 5px;
+    gap: 15px;
 }
 
 .projects .project-link {
