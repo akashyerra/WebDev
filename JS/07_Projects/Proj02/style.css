@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+main{
+
+}
+.container {
+    margin: 50px auto;
+    width: 80vw;
+    text-align: center;
+}
+
+.container form button {
+    border: none;
+    padding: 10px;
+    margin: 15px 0px;
+    background-color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.container form button:hover {
+    background-color: black;
+    color: white;
+    transition: .5s;
+}
