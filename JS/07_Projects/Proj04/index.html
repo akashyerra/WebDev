@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="github.com">GitHub</a>
+    </nav>
+    <main>
+        <div id="content">
+            <h1>Guess the number</h1>
+            <p>Try to guess a random number : Range [1 - 100]</p>
+            <p>You are only allowed to attempt 10 times</p>
+            <form action="" class="form">
+                <label for="guessNumber" id="guess">Guess Number</label>
+                <input type="text" id="guessNumber">
+                <input type="submit" value="Guess" id="submit" class="guessSubmit">
+            </form>
+
+            <div class="resultSpace">
+                <p>Previous Guesses : <span class="guesses"></span></p>
+                <p>Attempts remaining : <span class="remaining"></span></p>
+                <p class="lowOrHigh"></p>
+            </div>
+
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
